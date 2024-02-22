@@ -1,0 +1,18 @@
+<h1>New List</h1>
+
+<%= simple_form_for(@lists) do |l| %>
+  <%= l.input :name %>
+  <%= l.submit %>
+<% end %>
+
+<h1>New Bookmark</h1>
+
+<%= simple_form_for[@lists, @bookmarks] do |form| %>
+  <%= form.input :movie_id %>
+
+  <%= form.input :comment %>
+
+  <%= form.submit %>
+    <%= link_to "Create New Movie", new_movie_path %>
+
+<% end %>
