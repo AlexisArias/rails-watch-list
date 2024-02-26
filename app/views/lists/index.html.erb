@@ -2,7 +2,8 @@
 <ul>
   <% @lists.each do |list| %>
     <li><%= list.name %></li>
-    <%= link_to "List details", lists_path(list) %>
+    <%= link_to "List details", list_path(list) %>
+
   <% end %>
 </ul>
 
